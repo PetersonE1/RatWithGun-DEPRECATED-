@@ -3,7 +3,7 @@ Adds rat with a gun to Ultrakill using the Ultrakit modloader.
 
 Content folder contains all data within the mod's assetbundle.
 
-## Rats
+### Rats
 The four rats are
 - Rat With A Gun
 - Builder Rat
