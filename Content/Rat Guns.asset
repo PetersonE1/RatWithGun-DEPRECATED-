@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 157962457, guid: fc558c61558ab8f40ad16eb1f7b8b81b, type: 3}
+  m_Name: Rat Guns
+  m_EditorClassIdentifier: 
+  Name: Gun Rat
+  Icon: {fileID: 21300000, guid: 4fc5362b9aa2cfe4db5695ce66263342, type: 3}
+  Variants:
+  - {fileID: 7216171536464524862, guid: d7c3081a00d1e5f4a8a0799c59d3acf7, type: 3}
+  - {fileID: 4248477240483999476, guid: 4e7bf07c9a6f77c44b3baa02ea3e44ed, type: 3}
+  - {fileID: 5702219935581798832, guid: f399157ce6f17344990b957e948617c5, type: 3}
+  - {fileID: 840287756159531534, guid: 79b7b2e8c3b45dd46b98d7e13d9d46a4, type: 3}

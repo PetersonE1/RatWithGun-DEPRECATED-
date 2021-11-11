@@ -1,0 +1,4 @@
+Make the AOE rat choose a target based on cursor position
+Redo builder rat script
+Add magicka rat
+Actual aesthetics
