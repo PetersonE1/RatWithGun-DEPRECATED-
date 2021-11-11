@@ -11,9 +11,10 @@ The four rats are
 - Magick Rat (WIP)
 
 The four rats join you on your journey to find more blood by shooting your enemies, constructing powerful sentries, simply exploding them, and more!
+
 Magick rat is a reference to a game called Magicka, and will contain a fully functional elemental system complete with all known magicks.
 
-#### Requirements
+### Requirements
 This mod runs on Ultrakill using the Ultrakit modloader, which itself runs using the BepInEx modloader.
 
 Instructions for both can be found on the Ultrakit page.
