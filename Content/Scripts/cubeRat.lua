@@ -62,10 +62,8 @@ function Update(deltatime)
         allChildren = turret.GetComponentsInChildren("Transform")
         for i,child in ipairs(allChildren) do
             child.gameObject.layer = 24
-            if child.GetComponent("MeshRenderer") ~= nil then
-                child.GetComponent("MeshRenderer").enabled = true
-            end
         end
+        turret.gameObject.SetActive(true)
     end
   end
   if altfireBind.wasPressedThisFrame and statueReady then
@@ -92,19 +90,8 @@ function Update(deltatime)
         allChildren = statue.GetComponentsInChildren("Transform")
         for i,child in ipairs(allChildren) do
             child.gameObject.layer = 24
-            if child.GetComponent("MeshRenderer") ~= nil then
-                child.GetComponent("MeshRenderer").enabled = true
-            end
-            if child.GetComponent("MeshCollider") ~= nil then
-                child.GetComponent("MeshCollider").enabled = true
-            end
-            if child.GetComponent("CapsuleCollider") ~= nil then
-                child.GetComponent("CapsuleCollider").enabled = true
-            end
-            if child.GetComponent("BoxCollider") ~= nil then
-                child.GetComponent("BoxCollider").enabled = true
-            end
         end
+        statue.gameObject.SetActive(true)
         expP = AssetDatabase.Create("ExplosionPrime")
         expP.transform.position = hitcastResult.point
         expS = AssetDatabase.Create("ExplosionSuper")
@@ -112,11 +99,13 @@ function Update(deltatime)
         expS.transform.position = hitcastResult.point
         shock = AssetDatabase.Create("PhysicalShockwaveHarmless")
         shock.transform.position = hitcastResult.point
-        objects = GameObject.FindGameObjectsWithTag("Finish")
-	    for i, obj in ipairs(objects) do
-		    Object.Destroy(obj)
-	    end
-        statue.transform.root.gameObject.tag = "Finish"
+
+        __lastInstance = Registry.Get("lastStatue")
+        if __lastInstance ~= nil then
+            Object.Destroy(__lastInstance)
+        end
+        __lastInstance = statue.gameObject
+        Registry.Set("lastStatue", __lastInstance)
     end
   end
 

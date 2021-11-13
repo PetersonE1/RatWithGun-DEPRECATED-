@@ -9,9 +9,10 @@ finalLayerMask = envLayerMask + outLayerMask + enemyLayerMask + bigCorpseLayerMa
 function OnEnable()
 	timeStart = Time.time
 	timeToWait = 10
-	timeToCheck = 0.5
 	fireDelay = 0.5
 	lastFired = Time.time
+
+	Invoke(StartGun, 0.5)
 
 	gun = transform.Find("RAT/GUN")
 	muzzleOrigin = transform.Find("RAT/GUN/BARREL/MuzzleOrigin")
@@ -71,14 +72,11 @@ function Update()
 end
 
 function LateUpdate()
-	if Time.time - timeToCheck > timeStart and not spawned then
-		if transform.Find("RAT/BODY/Body").gameObject.GetComponent("MeshRenderer").enabled then
-			spawned = true
-		end
+	if Time.time - timeToWait > timeStart then
+		Destroy(gameObject)
 	end
-	if spawned then
-		if Time.time - timeToWait > timeStart then
-			Destroy(gameObject)
-		end
-	end
+end
+
+function StartGun()
+	spawned = true
 end
