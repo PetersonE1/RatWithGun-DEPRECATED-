@@ -1,3 +1,6 @@
+# THIS MOD IS NO LONGER FUNCTIONAL OR SUPPORTED
+### A remake of the mod is underway, there will be a link when published
+
 # Rat With A Gun
 Adds rat with a gun to Ultrakill using the Ultrakit modloader.
 
